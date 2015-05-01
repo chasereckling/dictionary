@@ -1,5 +1,6 @@
 class Word
-@@words = []
+  @@words = []
+  
   define_method(:initialize) do |new_word|
     @new_word = new_word
     @id = @@words.length().+(1)

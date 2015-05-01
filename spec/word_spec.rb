@@ -1,5 +1,4 @@
 require('rspec')
-require('dictionary')
 require('definition')
 require('word')
 
@@ -39,27 +38,27 @@ describe('Word') do
     end
   end
 
-   describe('.all') do
-     it("is an empty array at first") do
-       expect(Word.all()).to(eq([]))
-     end
-   end
+  describe('.all') do
+    it("is an empty array at first") do
+      expect(Word.all()).to(eq([]))
+    end
+  end
 
-   describe('.clear') do
-     it ("deletes all of the saved words") do
-       Word.new("cat").save()
-       Word.clear()
-       expect(Word.all()).to(eq([]))
-     end
-   end
+  describe('.clear') do
+    it("deletes all of the saved words") do
+      Word.new("cat").save()
+      Word.clear()
+      expect(Word.all()).to(eq([]))
+    end
+  end
 
-   describe('.find') do
-     it("returns a word by its id number") do
-       test_word = Word.new("cat")
-       test_word.save()
-       test_word2 = Word.new("cat")
-       test_word2.save()
-       expect(Word.find(test_word.id())).to(eq(test_word))
-     end
-   end
+  describe('.find') do
+    it("returns a word by its id number") do
+      test_word = Word.new("cat")
+      test_word.save()
+      test_word2 = Word.new("cat")
+      test_word2.save()
+      expect(Word.find(test_word.id())).to(eq(test_word))
+    end
+  end
 end
