@@ -20,4 +20,5 @@ class Word
     @@words = []
   end
 
+
 end

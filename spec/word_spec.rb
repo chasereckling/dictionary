@@ -21,7 +21,7 @@ describe('Word') do
       expect(Word.all()).to(eq([test_word]))
     end
   end
-  #
+  
   # describe('#id') do
   #   it("returns the id of the definition") do
   #     test_word = Definition.new("test_word is a Ruby argument")
