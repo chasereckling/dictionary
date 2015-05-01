@@ -1,1 +1,8 @@
 <h1>Welcome to Your Dictionary!</h1>
+<a href="/words/new">Add New Dealership</a>
+
+<ul>
+  <% @words.each() do |word| %>
+    <li><a href="/words/<%= word.id() %>"><%= word.name() %></a></li>
+  <% end %>
+</ul>

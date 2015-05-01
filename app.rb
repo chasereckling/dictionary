@@ -4,6 +4,7 @@ also_reload('lib/**/*.rb')
 require('./lib/dictionary')
 
 get('/') do
+  @words = Word.all()
   erb(:index)
 end
 
