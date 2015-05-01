@@ -21,14 +21,14 @@ describe('Word') do
       expect(Word.all()).to(eq([test_word]))
     end
   end
-  
-  # describe('#id') do
-  #   it("returns the id of the definition") do
-  #     test_word = Definition.new("test_word is a Ruby argument")
-  #     test_word.save()
-  #     expect(test_word.id()).to(eq(1))
-  #   end
-  # end
+
+  describe('#id') do
+    it("returns the id of the word") do
+      test_word = Word.new("cat")
+      test_word.save()
+      expect(test_word.id()).to(eq(1))
+    end
+  end
 
    describe('.all') do
      it("is an empty array at first") do
