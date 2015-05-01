@@ -43,14 +43,14 @@ describe('Word') do
        expect(Word.all()).to(eq([]))
      end
    end
-   #
-  #  describe('.find') do
-  #    it("returns a definition by its id number") do
-  #      test_word = Definition.new("test_word is a Ruby argument")
-  #      test_word.save()
-  #      test_word2 = Definition.new("test_word2 is a Ruby argument")
-  #      test_word2.save()
-  #      expect(Definition.find(test_word.id())).to(eq(test_word))
-  #    end
-  #  end
+
+   describe('.find') do
+     it("returns a word by its id number") do
+       test_word = Word.new("cat")
+       test_word.save()
+       test_word2 = Word.new("cat")
+       test_word2.save()
+       expect(Word.find(test_word.id())).to(eq(test_word))
+     end
+   end
 end
