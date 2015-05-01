@@ -21,6 +21,7 @@ describe('Definition') do
  describe('#save') do
    it('adds a definition to the array of saved definitions') do
      test_word = Definition.new("test_word is a Ruby argument")
+     test_word.save()
      expect(Definition.all()).to(eq([test_word]))
    end
  end
