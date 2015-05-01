@@ -4,6 +4,9 @@ require('definition')
 require('word')
 
 describe('Word') do
+  before() do
+    Word.clear()
+  end
 
   describe ('#new_word') do
     it("returns the name of the word") do
@@ -11,13 +14,13 @@ describe('Word') do
     expect(test_word.new_word()).to(eq("cat"))
     end
   end
-  # describe('#save') do
-  #   it('adds a word to the array of saved words') do
-  #     test_word = Word.new("cat")
-  #     test_word.save()
-  #     expect(Word.all()).to(eq([test_word]))
-  #   end
-  # end
+  describe('#save') do
+    it('adds a word to the array of saved words') do
+      test_word = Word.new("cat")
+      test_word.save()
+      expect(Word.all()).to(eq([test_word]))
+    end
+  end
   #
   # describe('#id') do
   #   it("returns the id of the definition") do
@@ -33,13 +36,13 @@ describe('Word') do
      end
    end
 
-  #  describe('.clear') do
-  #    it ("deletes all of the saved definitions") do
-  #      Definition.new("test_word is a Ruby argument").save()
-  #      Definition.clear()
-  #      expect(Definition.all()).to(eq([]))
-  #    end
-  #  end
+   describe('.clear') do
+     it ("deletes all of the saved words") do
+       Word.new("cat").save()
+       Word.clear()
+       expect(Word.all()).to(eq([]))
+     end
+   end
    #
   #  describe('.find') do
   #    it("returns a definition by its id number") do
