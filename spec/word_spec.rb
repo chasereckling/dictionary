@@ -30,6 +30,15 @@ describe('Word') do
     end
   end
 
+  describe('#add_definition') do
+    it("adds a new definitionto a word") do
+      test_word = Word.new("cat")
+      test_definition = Definition.new("fuzzy little creature")
+      test_word.add_definition(test_definition)
+      expect(test_word.definitions()).to(eq([test_definition]))
+    end
+  end
+
    describe('.all') do
      it("is an empty array at first") do
        expect(Word.all()).to(eq([]))
