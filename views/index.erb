@@ -1,8 +1,10 @@
 <h1>Welcome to Your Dictionary!</h1>
 <a href="/words/new">Add New Word</a>
 
+
+<h4>Word List:</h4>
 <ul>
   <% @words.each() do |word| %>
-    <li><a href="/words/<%= word.id() %>"><%= word.name() %></a></li>
+    <li><a href="/words/<%= word.id() %>"><%= word.new_word() %></a></li>
   <% end %>
 </ul>

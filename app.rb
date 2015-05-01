@@ -13,7 +13,7 @@ get('/words/new') do
 end
 
 post('/') do
-  name= params.fetch('name')
+  name = params.fetch('name')
   Word.new(name).save()
   @words = Word.all()
   erb(:success)
