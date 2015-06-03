@@ -7,28 +7,26 @@ own dictionary. Users add a word on the main page and can then navigate to that 
 
 Setup:
 -------------
-Your Dictionary! uses ruby version 2.2.0. to install navigate to the 'dictionary'
-file folder in your terminal then run the following command to
-install the Gemfile:
+Your Dictionary! uses ruby version 2.2.0. 
 
-$ bundle install
+1. After you download Your Dictionary! navigate to the 'dictionary'
+   file folder in your terminal then run the following command to
+   install the Gemfile:
 
-next run ruby app.rb in the terminal
+   $ bundle install
 
-$ ruby app.rb
+2. Run ruby app.rb in the terminal.
 
-and in your browser navigate to the url: localhost:4567.
+   $ ruby app.rb
+
+3. In your browser navigate to the url: localhost:4567.
 
 Copyright and Licensing:
 ------------------------
 For copyright and licensing Your Dictionary! uses the GNU GENERAL PUBLIC LICENSE,
 version 2.
 
-Who done it?
-------------
+Author:
+------
 Chase Reckling
 chase.reckling@gmail.com
-
-Heroku App:
------------
-https://fast-woodland-5545.herokuapp.com/
